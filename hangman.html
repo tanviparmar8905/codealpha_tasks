@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hangman.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎭 Hangman Challenge 🎭</h1>
+        <div class="word" id="word-display"></div>
+        <div class="keyboard" id="keyboard"></div>
+        <div class="info">
+            <p>❤️ Attempts Left: <span id="attempts">7</span></p>
+            <p>⏳ Time Left: <span id="timer">60</span>s</p>
+        </div>
+        <p id="best-score">🏆 Best Time: --</p>
+        <button id="give-up-btn" class="btn">🏳️ Give Up</button>
+        <button id="restart-btn" class="btn restart-btn">🔄 Restart Game</button>
+    </div>
+    
+    <script src="{{ url_for('static', filename='hangman.js') }}"></script>
+    <script src="{{ url_for('static', filename='confetti.js') }}"></script>
+</body>
+</html>
